@@ -35,10 +35,45 @@ export class FormUserDetails extends Component {
               margin="normal"
             />
             <br />
+            <TextField 
+              placeholder="Enter Your Last Name"
+              label="Last Name"
+              onChange={handleChange('lastName')}
+              defaultValue={values.lastName}
+              fullWidth
+              margin="normal"
+            />
+            <br />
+            <TextField 
+              placeholder="Enter Your Email"
+              label="Email"
+              onChange={handleChange('email')}
+              defaultValue={values.email}
+              fullWidth
+              margin="normal"
+            />
+            <br />
+            <Button 
+              variant="contained"
+              color="primary"
+              style={styles.button}
+              onClick={this.continue}
+              fullWidth
+              margin="normal"
+
+            >
+              Continue
+            </Button>
           </div>
         </React.Fragment>
       </ThemeProvider>
     );
+  }
+}
+
+const styles = {
+  button: {
+    marginTop: 15
   }
 }
 
